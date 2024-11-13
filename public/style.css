@@ -1,0 +1,521 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#f6f3ee ;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+   
+}
+
+/* Title Styling */
+.title {
+    color:#544541 ;
+    font-weight: bold;
+    width: 20px;
+    font-family: 'Barriecito';
+    font-size: 30px;
+   
+    
+}
+
+/* Navbar Links Styling */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    display: block;
+    color: #544541;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-links a:hover:not(.active) {
+    background-color:#f6f3ee;
+}
+
+.active {
+    background-color: #544541;
+}
+
+.caption{
+    width:250px;
+    height: 250px; 
+}
+h1{
+    text-align: left;
+    padding-left: 18px;
+    font-size: 3rem;
+    line-height: 2.3rem;
+    color:#544541 ;
+    font-family: 'Barriecito';
+}
+
+
+/* Add padding-top to body to prevent content overlap with fixed navbar */
+body {
+    padding-top: 150px;
+    background-color:#f6f3ee ;
+}
+
+/* Container for the images */
+.images {
+    display: flex;             /* Align images horizontally */
+    justify-content: center;   /* Center images horizontally */
+    align-items: center;       /* Vertically align images */
+    gap: 20px;
+    padding:20px  ;              /* Add space between images */
+    flex-wrap: wrap;           /* Ensure images wrap on smaller screens */
+    background-color: #544541; /* Background color of the container */
+    max-width: 1200px;         /* Set maximum width for the container */
+    margin: 0 auto;            /* Center the container horizontally */
+}
+
+  
+  /* Style for each image */
+  .images img {
+    width: 200px;  /* Set image width */
+    height: 200px; /* Keep aspect ratio of the image */
+    border-radius: 10px; /* Optional: add rounded corners to images */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover effect to enlarge images */
+  .images img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
+  }
+  
+/* Container for Flexbox Layout */
+
+
+/* Main ribbon container */
+.ribbon-container {
+    position: relative;
+    display: inline-block;
+    padding-left: 30px;
+}
+
+/* Main ribbon button style */
+.ribbon-button {
+    position: relative;
+    background-color: #f7e78a; /* Main color */
+    color: #5a5a5a; /* Darker color for contrast */
+    padding: 10px 20px;
+    font-family:'Barriecito';
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Left and right triangles */
+.ribbon-button::before,
+.ribbon-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.ribbon-button::before {
+    left: -20px;
+    border-width: 20px 20px 20px 0;
+    border-color: transparent #f7e78ab7 transparent transparent; /* Lighter shade */
+}
+
+.ribbon-button::after {
+    right: -20px;
+    border-width: 20px 0 20px 20px;
+    border-color: transparent transparent transparent #f7e78ab7; /* Lighter shade */
+}
+
+
+.ribbon-container::before,
+.ribbon-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    z-index: -1;
+}
+
+.ribbon-container::before {
+  left: -1px;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent rgba(0, 0, 0, 0.1) transparent transparent;
+}
+
+.ribbon-container::after {
+  right: -30px;
+  border-width: 20px 0 20px 20px;
+  border-color: transparent transparent transparent rgba(0, 0, 0, 0.1);
+}
+.ribbon-button:hover {
+  background-color: #544541; /* Darker shade for hover */
+  color: #ffffff;/* Slightly darker text color */
+
+}
+
+.ribbon-button:hover::before {
+  border-color: transparent #544541 transparent transparent;
+  color: #3e3e3e00;
+}
+
+.ribbon-button:hover::after {
+  border-color: transparent transparent transparent #544541;
+  color: #3e3e3e00;
+}
+
+
+
+/* Container for Flexbox Layout */
+
+.card {
+  flex: 0 1 30%; /* Set each card to 30% width to fit three per row */
+  max-width: 300px; /* Limit width to prevent stretching on larger screens */
+  height: 300px; /* Consistent height for each card */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  
+  
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+
+
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border: #FFD700;
+    border-width: 2px;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  margin-top: 10px;
+}
+
+.heart-icon i {
+  color: #33333344; /* Heart color */
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.heart-icon.liked i {
+  color: #e63946; /* Red color when liked */
+}
+
+
+.read{
+  background-color: #544541;
+    color: white;
+    padding: 12px ;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+
+/* Content inside the Card */
+.container {
+    padding: 2px 16px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px; /* Reduced space between the header and the form */
+    padding-top: 0px;
+  }
+
+  /* Styling the form container */
+  .form1 {
+    border-radius: 5px;
+    background-color: #f6f3ee;
+    padding: 80px;
+    border: 1px solid #544541;
+    max-width: 600px;
+    margin: 0 auto; /* Centering the form */
+  }
+
+  /* Styling the input and textarea fields */
+  input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  /* Styling the submit button */
+  button[type="submit"] {
+    background-color: #544541;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  /* Hover effect for the submit button */
+  button[type="submit"]:hover {
+    background-color: #54454170;
+  }
+
+    /* Button styling */
+    .login-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      background-color:#544541;
+      color: white;
+    }
+
+    /* Popup background overlay */
+    .popup-overlay {
+      display: none; /* Hidden by default */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      justify-content: center;
+      align-items: center;
+      z-index: 9999; /* Ensure it’s above other content */
+      animation: fadeIn 0.3s ease; /* Fade-in effect */
+    }
+
+    /* Popup content */
+    .popup-content {
+      background-color:#f6f3ee ;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      transform: scale(0); /* Initial state for the scale-in animation */
+      animation: scaleIn 0.3s ease forwards; /* Scale-in effect */
+    }
+
+    /* Animation for the overlay fade-in */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Animation for the popup scale-in */
+    @keyframes scaleIn {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    /* Close button styling */
+    .close-btn {
+      float: right;
+      font-size: 18px;
+      cursor: pointer;
+      color: #aaa;
+    }
+
+    .close-btn:hover {
+      color: #000;
+    }
+
+    /* Input fields styling */
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    /* Submit button styling */
+    .submit-btn {
+      background-color: #544541;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      background-color: #5445419a;
+    }
+
+
+    .footer {
+      display: flex;
+      flex-direction: column;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      width: 100%;
+    }
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start; /* Aligns items to the top */
+  }
+
+
+    
+    /* Footer left section with title */
+    .footer-left {
+      flex: 1;
+      font-size: 24px;
+      font-weight: bold;
+      padding-bottom: 10px;
+      color: #f8f6f5ba;
+      
+    }
+    
+    .title1{
+
+      color:#f8f6f5ba ;
+    font-weight: bold;
+    width: 20px;
+    font-family: 'Barriecito';
+    font-size: 30px;
+    margin: 0;
+    
+    
+
+    }
+
+
+    /* Footer right section */
+    .footer-right {
+      display: flex;
+      justify-content: flex-end;
+      gap: 40px;
+      margin-bottom: 20px;
+    }
+    
+    /* Contact Us and About Us styling */
+    .section h4 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #dcdcdc;
+    }
+    
+    .section p, .section a {
+      color: #aaa;
+      text-decoration: none;
+      margin: 5px 0;
+      display: block;
+    }
+    
+    .section a:hover {
+      color: #ddd;
+    }
+    
+    /* Footer bottom section */
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #555;
+      padding-top: 10px;
+    }
+
+
+    .social-icons i {
+      font-size: 24px;
+      color: #333;
+      margin-right: 10px;
+  }
+  
+  .social-icons a:hover i {
+      color: #0077b5;  /* Color when hovered over */
+  }
+  
+    
+    .social-icons a {
+      color: #aaa;
+      font-size: 18px;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+    
+    .social-icons a:hover {
+      color: #ddd;
+    }
+    
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .social-icons a {
+      margin-right: 10px;
+    }
+    
+    .copyright {
+      font-size: 14px;
+      color: #aaa;
+    }
+    
+    /* Ensure footer does not overlap with other content */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
+    .main-content {
+      flex: 1;
+    }

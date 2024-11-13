@@ -1,0 +1,66 @@
+*{
+    background-color:#f6f3ee;
+    margin: 0%;
+    padding: 0px;
+}
+
+.title{
+    color:black ;
+    font-weight: bold;
+    font-family: 'Barriecito';
+    font-size: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+.titlebox{
+    background-color:#544541 ;
+    padding: 30px;
+    margin-top: 30px;
+}
+.user{
+text-align: right;
+margin-right:40px ;
+margin-top: 60px;
+font-family: 'Barriecito';
+font-size: 2rem;
+
+}
+.id{
+    text-align: right;
+    margin-right:40px ;
+    margin-top: 10px;
+    font-family: 'Barriecito';
+    font-size: 1.2rem;
+    
+    }
+
+.contentbox{
+   padding: 20px;
+    margin: 30px 150px 0; 
+    border: 2px;
+    border-color: #544541;
+   
+}
+
+.content{
+    border: 2px;
+    border-color: #544541;
+}
+.content p {
+    margin: 15px 0;  /* Add margin between paragraphs */
+    line-height: 1.6; /* Improve readability */
+    color: #555;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content p:first-child {
+    margin-top: 0;  /* Remove top margin for the first paragraph */
+}
+
+.content p:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last paragraph */
+}
+
+

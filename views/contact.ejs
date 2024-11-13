@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact form</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h2>Create contact form</h2> 
+    <div class="form1">
+      <form class="form" method="post" action="/posts/contact">
+        <label for="username">First Name</label>
+        <input id="username" type="text" name="username" placeholder="Enter your name" required>
+
+        <label for="title">Last Name</label>
+        <input id="title" type="text" name="title" placeholder="Enter your blog title" required>
+
+        <label for="title">Email</label>
+        <input id="title" type="text" name="title" placeholder="Enter your blog title" required>
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Austrialia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">India</option>
+          <option value="usa">USA</option>
+        </select><br><br><br>
+    
+        <label for="content">Write your Content here</label>
+        <textarea id="content" name="content" placeholder="Write something..." style="height:200px" required></textarea>
+  
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+</body>
+</html>

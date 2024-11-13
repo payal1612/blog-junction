@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/show.css">
+    <link href='https://fonts.googleapis.com/css?family=Barriecito' rel='stylesheet'>
+    <title>Post Details</title>
+</head>
+<body>
+    <h2 style="margin-top: 10px; font-family: 'Barriecito';">Here is your post in detail...</h2>
+    <div class="post">
+        <div class="titlebox">
+            <h3 class="title"><%= post.title %></h3>
+        </div>
+        <p class="user">--@<%= post.username %></p>
+        <p class="id">Post ID: <%= post.id %></p>
+        
+        <div class="contentbox">
+            <div class="content">
+                <% if (Array.isArray(post.content)) { %>
+                    <% post.content.forEach(function(paragraph) { %>
+                        <p><%= paragraph %></p>
+                    <% }); %>
+                <% } else { %>
+                    <p>No content available.</p>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
